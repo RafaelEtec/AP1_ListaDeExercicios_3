@@ -57,23 +57,82 @@ public class Exercicios1a5 {
     public static void Exercicio1() {
         Scanner ent = new Scanner(System.in);
         
+        System.out.println("Informe o valor a ser usado: ");
+        int n = ent.nextInt();
+        
+        mostraEntre1eN(n);
+    }
+    
+    public static void mostraEntre1eN(int n) {
+        for (int pos = 1; pos <= n; pos++) {
+            System.out.print(pos+" ");
+        }
     }
 
     public static void Exercicio2() {
         Scanner ent = new Scanner(System.in);
         
+        System.out.println("Informe o valor a ser usado: ");
+        int n = ent.nextInt();
+        
+        mostraEntre0eNPar(n);
+    }
+    
+    public static void mostraEntre0eNPar(int n) {
+        for (int pos = 0; pos <= n; pos++) {
+            if (pos%2 == 0) {
+                System.out.print(pos+" ");
+            }
+        }
     }
 
     public static void Exercicio3() {
         Scanner ent = new Scanner(System.in);
+        
+        System.out.println("Informe o valor a ser usado: ");
+        int n = ent.nextInt();
+        
+        mostraEntre1eNImpar(n);
+    }
+    
+    public static void mostraEntre1eNImpar(int n) {
+        for (int pos = 1; pos <= n; pos++) {
+            if (pos%2 == 1) {
+                System.out.print(pos+" ");
+            }
+        }
     }
 
     public static void Exercicio4() {
         Scanner ent = new Scanner(System.in);
+        
+        System.out.println("Informe o valor de início: ");
+        int nStart = ent.nextInt();
+        System.out.println("Informe o valor final: ");
+        int nEnd = ent.nextInt();
+        
+        mostraEntre2Nums(nStart, nEnd);
+    }
+    
+    public static void mostraEntre2Nums(int nStart, int nEnd) {
+        for (int pos = nStart; pos <= nEnd; pos++) {
+            System.out.print(pos+" ");
+        }
     }
 
     public static void Exercicio5() {
         Scanner ent = new Scanner(System.in);
+        
+        System.out.println("Informe o valor a ser usado: ");
+        int n = ent.nextInt();
+        
+        mostraEntre1eNDecrescente(n);
+    }
+    
+    public static void mostraEntre1eNDecrescente(int n) {
+        for (int pos = n; pos >= 1; pos--) {
+            System.out.print(pos+" ");
+        }
     }
 }
 /**
