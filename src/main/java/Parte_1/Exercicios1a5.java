@@ -56,11 +56,14 @@ public class Exercicios1a5 {
     
     public static void Exercicio1() {
         Scanner ent = new Scanner(System.in);
-        
-        System.out.println("Informe o valor a ser usado: ");
-        int n = ent.nextInt();
-        
-        mostraEntre1eN(n);
+
+        try {
+            System.out.println("Informe o valor a ser usado: ");
+            int n = ent.nextInt();
+            mostraEntre1eN(n);
+        } catch (Exception ex) {
+            System.out.println("Letras não são permitidas!");
+        }
     }
     
     public static void mostraEntre1eN(int n) {
@@ -71,11 +74,14 @@ public class Exercicios1a5 {
 
     public static void Exercicio2() {
         Scanner ent = new Scanner(System.in);
-        
-        System.out.println("Informe o valor a ser usado: ");
-        int n = ent.nextInt();
-        
-        mostraEntre0eNPar(n);
+
+        try {
+            System.out.println("Informe o valor a ser usado: ");
+            int n = ent.nextInt();
+            mostraEntre0eNPar(n);
+        } catch (Exception ex) {
+            System.out.println("Letras não são permitidas!");
+        }
     }
     
     public static void mostraEntre0eNPar(int n) {
@@ -89,10 +95,13 @@ public class Exercicios1a5 {
     public static void Exercicio3() {
         Scanner ent = new Scanner(System.in);
         
-        System.out.println("Informe o valor a ser usado: ");
-        int n = ent.nextInt();
-        
-        mostraEntre1eNImpar(n);
+        try {
+            System.out.println("Informe o valor a ser usado: ");
+            int n = ent.nextInt();
+            mostraEntre1eNImpar(n);
+        } catch (Exception ex) {
+            System.out.println("Letras não são permitidas!");
+        }
     }
     
     public static void mostraEntre1eNImpar(int n) {
@@ -106,12 +115,15 @@ public class Exercicios1a5 {
     public static void Exercicio4() {
         Scanner ent = new Scanner(System.in);
         
-        System.out.println("Informe o valor de início: ");
-        int nStart = ent.nextInt();
-        System.out.println("Informe o valor final: ");
-        int nEnd = ent.nextInt();
-        
-        mostraEntre2Nums(nStart, nEnd);
+        try {
+            System.out.println("Informe o valor de início: ");
+            int nStart = ent.nextInt();
+            System.out.println("Informe o valor final: ");
+            int nEnd = ent.nextInt();
+            mostraEntre2Nums(nStart, nEnd);
+        } catch (Exception ex) {
+            System.out.println("Letras não são permitidas!");
+        }
     }
     
     public static void mostraEntre2Nums(int nStart, int nEnd) {
@@ -123,10 +135,13 @@ public class Exercicios1a5 {
     public static void Exercicio5() {
         Scanner ent = new Scanner(System.in);
         
-        System.out.println("Informe o valor a ser usado: ");
-        int n = ent.nextInt();
-        
-        mostraEntre1eNDecrescente(n);
+        try {
+            System.out.println("Informe o valor a ser usado: ");
+            int n = ent.nextInt();
+            mostraEntre1eNDecrescente(n);
+        } catch (Exception ex) {
+            System.out.println("Letras não são permitidas!");
+        }
     }
     
     public static void mostraEntre1eNDecrescente(int n) {
