@@ -14,7 +14,7 @@ public class Exercicios1a5 {
         try {
             escolha = ent.nextInt();
             while (escolha < 1 || escolha > 5) {
-                System.out.println("É possível escolher apenas entre 1 a 5");
+                System.out.println("É possível escolher apenas entre 1 e 5");
                 escolha = ent.nextInt();
             }
         } catch (Exception ex){

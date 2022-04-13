@@ -14,7 +14,7 @@ public class Exercicios6a11 {
         try {
             escolha = ent.nextInt();
             while (escolha < 6 || escolha > 11) {
-                System.out.println("É possível escolher apenas entre 6 a 11");
+                System.out.println("É possível escolher apenas entre 6 e 11");
                 escolha = ent.nextInt();
             }
         } catch (Exception ex){
