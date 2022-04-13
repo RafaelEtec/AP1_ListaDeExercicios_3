@@ -75,31 +75,116 @@ public class Exercicios12a16 {
     
     public static void Exercicio12() {
         Scanner ent = new Scanner(System.in);
-        
-        
+
+        try {
+            System.out.println("Informe a quantidade de pontos(*) a serem exibidos: ");
+            int nPontos = ent.nextInt();
+            
+            mostraPontosN(nPontos);
+        } catch (Exception ex) {
+            System.out.println("Letras não são permitidas!");
+        }
+    }
+    
+    public static void mostraPontosN(int nPontos) {
+        for (int pos = 1; pos <= nPontos; pos++) {
+            System.out.print("* ");
+        }
     }
     
     public static void Exercicio13() {
         Scanner ent = new Scanner(System.in);
-        
-        
+
+        try {
+            System.out.println("Informe a quantidade de linhas a serem exibidas: ");
+            int nLin = ent.nextInt();
+            
+            mostraQuadradoNLinhas(nLin);
+        } catch (Exception ex) {
+            System.out.println("Letras não são permitidas!");
+        }
+    }
+    
+    public static void mostraQuadradoNLinhas(int nLin) {
+        for (int pos = 1; pos <= nLin; pos++) {
+            for (int posCol = 1; posCol <= nLin; posCol++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
     }
     
     public static void Exercicio14() {
         Scanner ent = new Scanner(System.in);
-        
-        
+
+        try {
+            System.out.println("Informe a quantidade de linhas a serem exibidas: ");
+            int nLin = ent.nextInt();
+            System.out.println("Informe a quantidade de colunas a serem exibidas: ");
+            int nCol = ent.nextInt();
+            
+            mostraRetanguloLinhasColunas(nLin, nCol);
+        } catch (Exception ex) {
+            System.out.println("Letras não são permitidas!");
+        }
+    }
+    
+    public static void mostraRetanguloLinhasColunas(int nLin, int nCol) {
+        for (int pos = 1; pos <= nLin; pos++) {
+            for (int posCol = 1; posCol <= nCol; posCol++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
     }
     
     public static void Exercicio15() {
         Scanner ent = new Scanner(System.in);
         
-        
+        try {
+            System.out.println("Informe a quantidade de linhas a serem exibidas: ");
+            int nLin = ent.nextInt();
+            
+            mostraTrianguloNLinhas(nLin);
+        } catch (Exception ex) {
+            System.out.println("Letras não são permitidas!");
+        }
+    }
+    
+    public static void mostraTrianguloNLinhas(int nLin) {
+        for (int pos = nLin; pos >= 0; pos--) {
+            for (int i = pos; i < nLin; i++) {
+                System.out.print("* ");
+            }
+            System.out.println("");
+        }
     }
     
     public static void Exercicio16() {
         Scanner ent = new Scanner(System.in);
         
-        
+        try {
+            System.out.println("Informe a quantidade de linhas a serem exibidas: ");
+            int nLin = ent.nextInt();
+            
+            mostraTrianguloInvertidoNLinhas(nLin);
+        } catch (Exception ex) {
+            System.out.println("Letras não são permitidas!");
+        }
+    }
+    
+    public static void mostraTrianguloInvertidoNLinhas(int nLin) {
+        // A fazer
     }
 }
+
+/**
+    public static void mostraTrianguloNLinhas(int nLin) {
+        for (int pos = 0; pos <= nLin; pos++) {
+            for (int i = pos; i < nLin; i++) {
+                System.out.print("* ");
+            }
+            System.out.println("");
+        }
+    }
+**/
