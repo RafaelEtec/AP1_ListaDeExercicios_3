@@ -195,7 +195,8 @@ public class Exercicios6a11 {
     
     public static void mostraTabuadaN(int n) {
         for (int pos = 1; pos <= 10; pos++) {
-            System.out.println(n+" X "+pos+" = "+n*pos);
+            int res = n * pos;
+            System.out.printf("%d x %d = %d\n", n, pos, res);
         }
     }
 }
