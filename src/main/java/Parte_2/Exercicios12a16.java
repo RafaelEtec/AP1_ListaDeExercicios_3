@@ -156,7 +156,7 @@ public class Exercicios12a16 {
             for (int i = pos; i < nLin; i++) {
                 System.out.print("* ");
             }
-            System.out.println("");
+            System.out.println();
         }
     }
     
@@ -172,17 +172,14 @@ public class Exercicios12a16 {
             System.out.println("Letras não são permitidas!");
         }
     }
-    // A Terminar
+    // A Terminar16
     public static void mostraTrianguloInvertidoNLinhas(int nLin) {
-        int nAnt = nLin;
+        int nAnt = nLin--;
         for (int pos = 1; pos <= nLin; pos++) {
-            for (int posCol = 0; posCol <= nLin; posCol++) {
-                while (posCol <= nAnt) {
-                    System.out.print("*  ");
-                    nAnt--;
-                }
-                System.out.println();
+            for (int posCol = nLin; posCol >= 0; posCol--) {
+                System.out.print(" *");
             }
+            System.out.println();
         }
     }
 }
