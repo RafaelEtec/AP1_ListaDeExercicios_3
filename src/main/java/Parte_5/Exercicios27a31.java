@@ -54,35 +54,106 @@ public class Exercicios27a31 {
         }
     }
     
+    // A Revisar ---------------------------------------------------------------
     public static void Exercicio27() {
         Scanner ent = new Scanner(System.in);
         
-        System.out.println("Informe o texto: ");
+        System.out.println("Informe o Texto: ");
         String txt = ent.next();
         
-        separarTexto(txt);
-    }
-    
-    public static void separarTexto(String txt) {
-        for (int pos = 0; pos < txt.length(); pos++) {
-            if (pos == txt.length()) {
-                System.out.print(txt.charAt(pos));
-            } else {
-                System.out.print(txt.charAt(pos)+"-");
-            }
+        char posChar[] = separarTexto(txt);
+        for (int pos = 0; pos < posChar.length; pos++) {
+            System.out.print(posChar[pos]+"-");
         }
     }
     
+    public static char[] separarTexto(String txt) {
+        char[] txtSeparado = new char[txt.length()];
+        
+        for (int pos = 0; pos < txt.length(); pos++) {
+            txtSeparado[pos] = txt.charAt(pos);
+        }
+        
+        return txtSeparado;
+    }
+    
+    // A Revisar ---------------------------------------------------------------
     public static void Exercicio28() {
         Scanner ent = new Scanner(System.in);
         
+        System.out.println("Informe o Texto: ");
+        String txt = ent.next();
         
+        int intQntVogais = qntVogaisTexto(txt);
+        System.out.println("Este texto possui: "+intQntVogais+" vogais.");
     }
     
+    public static int qntVogaisTexto(String txt) {
+        int intQntVogais = 0;
+        String guarda = "";
+        
+        for (int pos = 0; pos < txt.length(); pos++) {
+            guarda = Character.toString(txt.charAt(pos));
+            
+            if (guarda.toLowerCase().equals("a")
+             || guarda.toLowerCase().equals("e")
+             || guarda.toLowerCase().equals("i")
+             || guarda.toLowerCase().equals("o")
+             || guarda.toLowerCase().equals("u")) {
+                intQntVogais++;
+            }
+        }
+        
+        return intQntVogais;
+    }
+    
+    // A Revisar ---------------------------------------------------------------
     public static void Exercicio29() {
         Scanner ent = new Scanner(System.in);
         
+        System.out.println("Informe o Texto: ");
+        String txt = ent.next();
         
+        boolean possuiTodasVogais = possuiTodasVogais(txt);
+        System.out.println("Possui todas as vogais?: "+possuiTodasVogais);
+    }
+    
+    public static boolean possuiTodasVogais(String txt) {
+        boolean possuiTodasVogais = false;
+        boolean a = false, e = false, i = false, o = false, u = false;
+        String guarda = "";
+        
+        for (int pos = 0; pos < txt.length(); pos++) {
+            guarda = Character.toString(txt.charAt(pos));
+            
+            switch (guarda.toLowerCase()) {
+                case "a":
+                    a = true;
+                    break;
+                case "e":
+                    e = true;
+                    break;
+                case "i":
+                    i = true;
+                    break;
+                case "o":
+                    o = true;
+                    break;
+                case "u":
+                    u = true;
+                    break;
+            }
+        }
+        
+        if (a == true
+         && e == true
+         && i == true
+         && o == true
+         && u == true) {
+            possuiTodasVogais = true;
+        }
+        
+        return possuiTodasVogais;
     }
     
     public static void Exercicio30() {
