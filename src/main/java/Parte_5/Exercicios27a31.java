@@ -59,7 +59,7 @@ public class Exercicios27a31 {
         Scanner ent = new Scanner(System.in);
         
         System.out.println("Informe o Texto: ");
-        String txt = ent.next();
+        String txt = ent.nextLine();
         
         char posChar[] = separarTexto(txt);
         for (int pos = 0; pos < posChar.length; pos++) {
@@ -82,7 +82,7 @@ public class Exercicios27a31 {
         Scanner ent = new Scanner(System.in);
         
         System.out.println("Informe o Texto: ");
-        String txt = ent.next();
+        String txt = ent.nextLine();
         
         int intQntVogais = qntVogaisTexto(txt);
         System.out.println("Este texto possui: "+intQntVogais+" vogais.");
@@ -112,7 +112,7 @@ public class Exercicios27a31 {
         Scanner ent = new Scanner(System.in);
         
         System.out.println("Informe o Texto: ");
-        String txt = ent.next();
+        String txt = ent.nextLine();
         
         boolean possuiTodasVogais = possuiTodasVogais(txt);
         System.out.println("Possui todas as vogais?: "+possuiTodasVogais);
@@ -160,7 +160,7 @@ public class Exercicios27a31 {
         Scanner ent = new Scanner(System.in);
         
         System.out.println("Informe o texto: ");
-        String txt = ent.next();
+        String txt = ent.nextLine();
         System.out.println("Informe a letra para calcular a frequência: ");
         String letra = ent.next();
         
