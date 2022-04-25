@@ -51,7 +51,23 @@ public class Exercicios32a35 {
     public static void Exercicio32() {
         Scanner ent = new Scanner(System.in);
         
+        System.out.println("Informe o texto: ");
+        String txt = ent.nextLine();
         
+        String txtContrario = txtAoContrario(txt);
+        System.out.println(txt+" => "+txtContrario);
+    }
+    
+    public static String txtAoContrario(String txt) {
+        String txtContrario = "";
+        String guarda = "";
+        
+        for (int pos = 0; pos < txt.length(); pos++) {
+            guarda = Character.toString(txt.charAt(pos));
+            txtContrario = guarda + txtContrario;
+        }
+        
+        return txtContrario;
     }
     
     public static void Exercicio33() {
