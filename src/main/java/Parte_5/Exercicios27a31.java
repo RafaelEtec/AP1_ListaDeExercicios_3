@@ -159,12 +159,56 @@ public class Exercicios27a31 {
     public static void Exercicio30() {
         Scanner ent = new Scanner(System.in);
         
+        System.out.println("Informe o texto: ");
+        String txt = ent.next();
+        System.out.println("Informe a letra para calcular a frequência: ");
+        String letra = ent.next();
         
+        int freq = frequenciaLetraTXT(txt, letra);
+        System.out.println("Aparece "+freq+" vezes");
+    }
+    
+    public static int frequenciaLetraTXT(String txt, String letra) {
+        int freq = 0;
+        String guarda = "";
+        
+        for (int pos = 0; pos < txt.length(); pos++) {
+            guarda = Character.toString(txt.charAt(pos));
+            
+            if (guarda.toLowerCase().equals(letra)) {
+                freq++;
+            }
+        }
+        
+        return freq;
     }
     
     public static void Exercicio31() {
         Scanner ent = new Scanner(System.in);
         
+        System.out.println("Informe o Número: ");
+        int numTodo = ent.nextInt();
+        System.out.println("Informe o número para calcular a frequência: ");
+        int num = ent.nextInt();
         
+        int freq = frequenciaNumTodo(numTodo, num);
+        System.out.println("Aparece "+freq+" vezes");
+    }
+    
+    public static int frequenciaNumTodo(int numTodo, int num) {
+        int freq = 0;
+        String strNumTodo = String.valueOf(numTodo);
+        String strNum = String.valueOf(num);
+        String guarda = "";
+        
+        for (int pos = 0; pos < strNumTodo.length(); pos++) {
+            guarda = Character.toString(strNumTodo.charAt(pos));
+            
+            if (guarda.equals(strNum)) {
+                freq++;
+            }
+        }
+        
+        return freq;
     }   
 }
