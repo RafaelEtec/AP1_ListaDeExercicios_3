@@ -183,7 +183,23 @@ public class Exercicios36a41 {
     public static void Exercicio40() {
         Scanner ent = new Scanner(System.in);
         
+        System.out.println("Informe a posição do número Fibonacci: ");
+        int posFibo = ent.nextInt();
         
+        int numFibo = posicaoFibo(posFibo);
+        System.out.println(posFibo+" => "+numFibo);
+    }
+    
+    public static int posicaoFibo(int posFibo) {
+        int numFibo = 0, proxNum = 1, guarda;
+        
+        for (int pos = 0; pos < posFibo; pos++) {
+            guarda = numFibo + proxNum;
+            numFibo = proxNum;
+            proxNum = guarda;
+        }
+        
+        return numFibo;
     }
     
     public static void Exercicio41() {
