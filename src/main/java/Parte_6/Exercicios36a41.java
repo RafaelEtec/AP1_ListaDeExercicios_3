@@ -151,7 +151,33 @@ public class Exercicios36a41 {
     public static void Exercicio39() {
         Scanner ent = new Scanner(System.in);
         
+        System.out.println("Informe o número: ");
+        int num = ent.nextInt();
         
+        boolean boolPrimo = primoOuNao(num);
+        System.out.println(num+" => "+boolPrimo);
+    }
+    
+    public static boolean primoOuNao(int num) {
+        boolean boolPrimo = false;
+        int mu = num/2, valida = 0;
+
+        if (num == 0||num == 1){
+            boolPrimo = false;
+        } else {
+            for(int pos = 2; pos <= mu; pos++){
+                if(num%pos == 0){
+                    valida = 1;
+                    break;
+                }
+            }
+
+            if (valida == 0) {
+                boolPrimo = true;
+            }
+        }
+        
+        return boolPrimo;
     }
     
     public static void Exercicio40() {
