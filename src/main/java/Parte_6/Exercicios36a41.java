@@ -70,7 +70,21 @@ public class Exercicios36a41 {
     public static void Exercicio37() {
         Scanner ent = new Scanner(System.in);
         
+        System.out.println("Informe a senha: ");
+        String senha = ent.next();
         
+        boolean senhaForte = boolSenhaForteOuNao(senha);
+        System.out.println(senha+" => "+senhaForte);
+    }
+    
+    public static boolean boolSenhaForteOuNao(String senha) {
+        boolean senhaForte = false;
+        
+        for (int pos = 0; pos < 10; pos++) {
+            
+        }
+        
+        return senhaForte;
     }
     
     public static void Exercicio38() {
