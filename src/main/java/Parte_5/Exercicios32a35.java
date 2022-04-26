@@ -82,10 +82,12 @@ public class Exercicios32a35 {
     
     public static boolean palindromoOuNao(String txt) {
         boolean boolPalin = false;
-        String guarda = "";
-        String guardaUlt = "";
+        txt = txt.replace(" ", "");
+        String txtContrario = txtAoContrario(txt);
         
-        
+        if (txt.equals(txtContrario)) {
+            boolPalin = true;
+        }
  
         return boolPalin;
     }
@@ -116,6 +118,22 @@ public class Exercicios32a35 {
     public static void Exercicio35() {
         Scanner ent = new Scanner(System.in);
         
+        System.out.println("Informe o texto: ");
+        int num = ent.nextInt();
         
+        boolean boolNumPalin = numPalindromoOuNao(num);
+        System.out.println(num+" => "+boolNumPalin);
+    }
+    
+    public static boolean numPalindromoOuNao(int num) {
+        boolean boolPalin = false;
+        String strNum = String.valueOf(num);
+        String numContrario = numAoContrario(num);
+        
+        if (strNum.equals(numContrario)) {
+            boolPalin = true;
+        }
+ 
+        return boolPalin;
     }
 }
