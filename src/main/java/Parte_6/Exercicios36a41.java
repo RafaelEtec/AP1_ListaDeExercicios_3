@@ -114,7 +114,23 @@ public class Exercicios36a41 {
     public static void Exercicio38() {
         Scanner ent = new Scanner(System.in);
         
+        System.out.println("Informe a palavra: ");
+        String palavra = ent.nextLine();
         
+        String palavraBinario = stringParaBinario(palavra);
+        System.out.println("\n"+palavra+" => "+palavraBinario);
+    }
+    
+    public static String stringParaBinario(String palavra) {
+        String palavraBinario = "", guarda = "";
+        char guardaChar = ' ';
+        for (int pos = 0; pos < palavra.length(); pos++) {
+            guardaChar = palavra.charAt(pos);
+            guarda = Integer.toBinaryString(guardaChar);
+            palavraBinario = palavraBinario+"0"+guarda+" ";
+        }
+        
+        return palavraBinario;
     }
     
     public static void Exercicio39() {
