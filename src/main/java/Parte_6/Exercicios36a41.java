@@ -64,7 +64,22 @@ public class Exercicios36a41 {
     public static void Exercicio36() {
         Scanner ent = new Scanner(System.in);
         
+        System.out.println("Informe a palavra: ");
+        String palavra = ent.nextLine();
         
+        String palavraAscii = stringParaAscii(palavra);
+        System.out.println(palavra+" => "+palavraAscii);
+    }
+    
+    public static String stringParaAscii(String palavra) {
+        String palavraAscii = "";
+        byte ascii = ' ';
+        for (int pos = 0; pos < palavra.length(); pos++) {
+            ascii = (byte) palavra.charAt(pos);
+            palavraAscii = palavraAscii+ascii+" ";
+        }
+        
+        return palavraAscii;
     }
     
     public static void Exercicio37() {
