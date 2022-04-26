@@ -79,9 +79,33 @@ public class Exercicios36a41 {
     
     public static boolean boolSenhaForteOuNao(String senha) {
         boolean senhaForte = false;
-        
-        for (int pos = 0; pos < 10; pos++) {
+        boolean numerosOk = false, digitosOk = false, especiaisOk = false;
+        int qntNumeros = 0, qntDigitos = senha.length(), qntEspeciais = 0;
+        String guarda = "", especiais = "!@#$%&*()'+,-./:;<=>?[]^_`{|}", numeros = "0123456789";
+        for (int pos = 0; pos < senha.length(); pos++) {
+            guarda = Character.toString(senha.charAt(pos));
             
+            if (especiais.contains(guarda)) {
+                qntEspeciais++;
+            } else if (numeros.contains(guarda)) {
+                qntNumeros++;
+            }
+        }
+        
+        if (qntNumeros >= 2) {
+            numerosOk = true;
+        }
+        
+        if (qntEspeciais >= 2) {
+            especiaisOk = true;
+        }
+        
+        if (qntDigitos >= 8) {
+            digitosOk = true;
+        }
+        
+        if (digitosOk && numerosOk && especiaisOk) {
+            senhaForte = true;
         }
         
         return senhaForte;
