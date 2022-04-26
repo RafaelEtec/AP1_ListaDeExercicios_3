@@ -73,13 +73,44 @@ public class Exercicios32a35 {
     public static void Exercicio33() {
         Scanner ent = new Scanner(System.in);
         
+        System.out.println("Informe o texto: ");
+        String txt = ent.nextLine();
         
+        boolean boolPalin = palindromoOuNao(txt);
+        System.out.println(txt+" => "+boolPalin);
+    }
+    
+    public static boolean palindromoOuNao(String txt) {
+        boolean boolPalin = false;
+        String guarda = "";
+        String guardaUlt = "";
+        
+        
+ 
+        return boolPalin;
     }
     
     public static void Exercicio34() {
         Scanner ent = new Scanner(System.in);
         
+        System.out.println("Informe o número: ");
+        int num = ent.nextInt();
         
+        String numContrario = numAoContrario(num);
+        System.out.println(num+" => "+numContrario);
+    }
+    
+    public static String numAoContrario(int num) {
+        String strNum = String.valueOf(num);
+        String guarda = "";
+        String numContrario = "";
+        
+        for (int pos = 0; pos < strNum.length(); pos++) {
+            guarda = Character.toString(strNum.charAt(pos));
+            numContrario = guarda + numContrario;
+        }
+        
+        return numContrario;
     }
     
     public static void Exercicio35() {
