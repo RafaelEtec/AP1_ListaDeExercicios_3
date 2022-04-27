@@ -205,7 +205,56 @@ public class Exercicios36a41 {
     public static void Exercicio41() {
         Scanner ent = new Scanner(System.in);
         
+        System.out.println("Informe o texto: ");
+        String txt = ent.nextLine();
         
+        String txtZenitPolar = converterParaZenitPolar(txt);
+        System.out.println(txt+" => "+txtZenitPolar);
     }
     
+    public static String converterParaZenitPolar(String txt) {
+        String txtZenitPolar = "";
+        char guarda;
+        
+        for (int pos = 0; pos < txt.length(); pos++) {
+            guarda = txt.toLowerCase().charAt(pos);
+            
+            switch (guarda) {
+                case 'z':
+                    guarda = 'p';
+                    break;
+                case 'e':
+                    guarda = 'o';
+                    break;
+                case 'n':
+                    guarda = 'l';
+                    break;
+                case 'i':
+                    guarda = 'a';
+                    break;
+                case 't':
+                    guarda = 'r';
+                    break;
+                case 'p':
+                    guarda = 'z';
+                    break;
+                case 'o':
+                    guarda = 'e';
+                    break;
+                case 'l':
+                    guarda = 'n';
+                    break;
+                case 'a':
+                    guarda = 'i';
+                    break;
+                case 'r':
+                    guarda = 't';
+                    break;
+            }
+            
+            txtZenitPolar = txtZenitPolar+guarda;
+        }
+        
+        return txtZenitPolar;
+    }
 }
