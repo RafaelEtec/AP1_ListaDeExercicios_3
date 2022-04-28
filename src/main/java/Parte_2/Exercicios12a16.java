@@ -174,10 +174,13 @@ public class Exercicios12a16 {
     }
     // A Terminar16
     public static void mostraTrianguloInvertidoNLinhas(int nLin) {
-        int nAnt = nLin--;
-        for (int pos = 1; pos <= nLin; pos++) {
-            for (int posCol = nLin; posCol >= 0; posCol--) {
-                System.out.print(" *");
+        for (int posLin = 0; posLin < nLin; posLin++) {
+            for (int posCol = 0; posCol <= nLin; posCol++) {
+                if (posCol < nLin) {
+                    System.out.print(" ");
+                } else {
+                    System.out.print(" *");
+                } 
             }
             System.out.println();
         }

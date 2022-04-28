@@ -83,7 +83,20 @@ public class Exercicios22a26 {
     public static void Exercicio22() {
         Scanner ent = new Scanner(System.in);
         
+        System.out.println("Informe o número de linhas: ");
+        int nLin = ent.nextInt();
         
+        mostraLosango(nLin);
+    }
+    
+    public static void mostraLosango(int nLin) {
+        for (int pos = 0; pos <= nLin; pos++) {
+            if (pos < nLin) {
+                System.out.print(" ");
+            } else {
+                System.out.print(" *");
+            }
+        }
     }
     
     public static void Exercicio23() {
